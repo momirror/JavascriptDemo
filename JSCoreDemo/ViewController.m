@@ -19,8 +19,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 20, 300, 30);
+    btn.backgroundColor = [UIColor blueColor];
+    [btn setTitle:@"用js添加一个View" forState:UIControlStateNormal];
+    btn.center = self.view.center;
+    [btn addTarget:self action:@selector(addView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
 //    [self getJSBundleVersion];
-    [self addView];
+    
 }
 
 
